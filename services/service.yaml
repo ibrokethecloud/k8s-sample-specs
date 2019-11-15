@@ -1,12 +1,12 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: demo-app-svc
+  name: hell-world-svc
 spec:
   selector:
-    app: demo-app-pod
+    app: hello-world
   ports:
   - name: http
     protocol: TCP
     port: 80
-    targetPort: 5000
+    targetPort: 80
