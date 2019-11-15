@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-config-map
+data:
+  entrypoint.sh: |
+    #/bin/sh
+    while true
+    do
+    cat /data/demo.txt
+    export DATE=$(date +%d%m%y-%H%M)
+    echo -e "Current time is ${DATE} \n"
+    sleep 60
+    done
+  demo.txt: |
+    Hello world!
+    From the demo.txt file mounted from a ConfigMap.
