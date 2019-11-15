@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: hell-world-svc
+  name: hello-world-svc
 spec:
   selector:
     app: hello-world
