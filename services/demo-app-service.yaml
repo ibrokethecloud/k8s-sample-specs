@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: demo-app-svc
+  namespace: demo
+spec:
+  selector:
+    app: demo-app-pod
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 5000
